@@ -5,6 +5,11 @@ def nyc_pigeon_organizer(data)
     value_list.each_pair do |value, name_list|
       name_list.each_with_index do |name, index|
         list[name] = {} if not list[name]
-        list[name][attribute]
-    
+        list[name][attribute] = [] if not list[name][attribute]
+        list[name][attribute].push(value)
+      end
+    end
+  end
+  
+  return list
 end
