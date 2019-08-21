@@ -6,7 +6,7 @@ def nyc_pigeon_organizer(data)
       name_list.each_with_index do |name, index|
         list[name] = {} if not list[name]
         list[name][attribute] = [] if not list[name][attribute]
-        list[name][attribute].push(value)
+        list[name][attribute].push(value.to_s)
       end
     end
   end
