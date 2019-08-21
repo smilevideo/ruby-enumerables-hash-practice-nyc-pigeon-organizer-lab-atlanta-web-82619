@@ -4,6 +4,7 @@ def nyc_pigeon_organizer(data)
   data.each_value do |attribute|
     attribute.each_value do |value|
       value.each_with_index do |name, index|
-        list[name]
+        list[name] = {} if not list[name]
+        list[name][attribute]
     
 end
